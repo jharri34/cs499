@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "~3.2.0",
-    "crafty": "~0.6.3"
+    "crafty": "~0.6.3",
+    "rot.js": "~0.5.0"
   }
 }
