@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>cs499</title>
     <meta name="description" content="">
@@ -15,39 +16,54 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body>
+</head>
+
+<body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
 
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">pacman</h3>
-      </div>
-      <div id="scoreboard" class=row>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><h3>score: </h3><p>000000000000000</p></div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><h3>high score:</h3> <p>00000000000000</p></div>
-      </div>
+        <div class="header row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="#">ByteMan</a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="#">Home</a>
+                    </li>
+                    <li><a href="#">About</a>
+                    </li>
+                    <li><a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class=row>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h4>score:</h4>
+                <h4 id="score">0</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h4> high score:</h4>
+                <h4 id="highScore">0</h4>
+            </div>
+        </div>
 
-      <div class="jumbotron">
-        <div id="game"></div>
-      </div>
+        <div class="jumbotron">
+            <div id="game"></div>
+        </div>
 
-      <div class="row ">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><h4>lives:000</h4></div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><h4>upgrades:000</h4></div>
-      </div>
+        <div class="row ">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h4>lives:</h4><h4 id="lives">3</h4>
+            </div>
+            
+        </div>
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
+        <div class="footer">
+        </div>
 
     </div>
 
@@ -60,39 +76,31 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
 
-        <!-- build:js(.) scripts/plugins.js -->
-        <script src="bower_components/bootstrap/js/affix.js"></script>
-        <script src="bower_components/bootstrap/js/alert.js"></script>
-        <script src="bower_components/bootstrap/js/dropdown.js"></script>
-        <script src="bower_components/bootstrap/js/tooltip.js"></script>
-        <script src="bower_components/bootstrap/js/modal.js"></script>
-        <script src="bower_components/bootstrap/js/transition.js"></script>
-        <script src="bower_components/bootstrap/js/button.js"></script>
-        <script src="bower_components/bootstrap/js/popover.js"></script>
-        <script src="bower_components/bootstrap/js/carousel.js"></script>
-        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
-        <script src="bower_components/bootstrap/js/collapse.js"></script>
-        <script src="bower_components/bootstrap/js/tab.js"></script>
-        <!-- endbuild -->
+    <!-- build:js(.) scripts/plugins.js -->
+    <script src="bower_components/bootstrap/js/affix.js"></script>
+    <script src="bower_components/bootstrap/js/alert.js"></script>
+    <script src="bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="bower_components/bootstrap/js/tooltip.js"></script>
+    <script src="bower_components/bootstrap/js/modal.js"></script>
+    <script src="bower_components/bootstrap/js/transition.js"></script>
+    <script src="bower_components/bootstrap/js/button.js"></script>
+    <script src="bower_components/bootstrap/js/popover.js"></script>
+    <script src="bower_components/bootstrap/js/carousel.js"></script>
+    <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+    <script src="bower_components/bootstrap/js/collapse.js"></script>
+    <script src="bower_components/bootstrap/js/tab.js"></script>
+    <!-- endbuild -->
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <script src="scripts/crafty-init.js"></script>
-        <script src="scripts/player-entity.js"></script>
-        <script src="scripts/ux-entity.js"></script>
-        <script src="scripts/grid.js"></script>
-        <script src="scripts/maze-entity.js"></script>
-        <script src="scripts/ghosts.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/crafty-init.js"></script>
+    <script src="scripts/grid.js"></script>
+    <script src="scripts/maze-entity.js"></script>
+    <script src="scripts/ghosts.js"></script>
+    <script src="scripts/score.js"></script>
+    <script src="scripts/player-entity.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>
