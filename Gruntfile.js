@@ -153,7 +153,6 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/styles/',
           src: '{,*/}*.css',
           dest: '.tmp/styles/'
         }]
@@ -212,18 +211,6 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/images',
-          src: '{,*/}*.{gif,jpeg,jpg,png}',
-          dest: '<%= config.dist %>/images'
-        }]
-      }
-    },
-
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/images',
           src: '{,*/}*.svg',
           dest: '<%= config.dist %>/images'
         }]
@@ -245,7 +232,6 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= config.dist %>',
           src: '{,*/}*.html',
           dest: '<%= config.dist %>'
         }]
@@ -284,7 +270,6 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           dot: true,
-          cwd: '<%= config.app %>',
           dest: '<%= config.dist %>',
           src: [
             '*.{ico,png,txt}',
@@ -298,7 +283,6 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           dot: true,
-          cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= config.dist %>'
         }]
@@ -306,7 +290,6 @@ module.exports = function (grunt) {
       styles: {
         expand: true,
         dot: true,
-        cwd: '<%= config.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
       }
